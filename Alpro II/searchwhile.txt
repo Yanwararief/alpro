@@ -1,0 +1,59 @@
+====================================
+Searchwhile.cpp
+====================================
+Nama 	: Riky Darmawan
+Kelas	: Teknik Informatika W 16 A
+NIM	: 16111305
+====================================
+Proses Program : 
+1. 	Pada main program, Pertama kita membuat sebuah variabel Array yang bertipe integer 
+	dengan ukuran tidak didefinisikan. Setelah itu kita isi array dengan 
+	beberapa angka secara acak atau stuktur (Ex. 2,3,4,5,6,7,8,9,10,11) - (Line 8)
+	
+3. 	Setelah itu, Kita membuat variabel  "cari" bertipe integer untuk menyimpan data(angka) 
+	yang akan kita cari pada proses selanjutnya - (Line 9)
+  
+4.	Buat proses inputan pencarian yang akan di simpan pada variabel "cari" - (Line 13)
+
+5. 	Sebelumnya kita pernah membuat satu buah  variabel untuk insialisasi 
+	proses pengulangan (While) - (Line 16). Kita beri nilai pada variabel tsb berupa angka 0, 
+	di karenakan pada setiap proses pengulangan 
+	kita memulai dari titik awal dan titik awal tersebut adalah angka 0.
+
+6. 	Dikarenakan kita tidak mengetahui
+	ukuran array pada angka yang akan kita cari di dalam array. kita gunakan fungsi :
+	
+	[mencari ukuran array]	
+	------- sizeof(array) - sizeof(*array) = Ukuran dari variabel "array" - (Line 8) -----------
+	
+
+7. 	Setelah kita mengetahui ukuran array maka selanjutnya kita akan mencari angka yg akan di cari.
+	Disini kita melakukan proses pengulangan mengunakan while 
+
+	while ( i < sizeof(array) / sizeof(*array) && array[i] != cari) i++; - (Line 17)
+	
+	Ket :
+	Ketika i (titik awal inisial) yaitu 0 lebih kecil dari [ukuran array] dan isi dari array[i]
+	/isi dari array[0] tidak sama dengan angka yang kita cari maka nilai i+1 akan terus diulang. 
+	Jika  kita mencari angka 3 pada variabel "array". Proses ini akan mencari terlebih dahulu isi 
+	array[0] - array[~]/[Max. ukuran array] apakah sama dengan apa yang kita cari. 
+	
+	Ex. Kita mencari angka 3. Disini angka 3 terdapat 
+	pada array[1] maka kita telah mendapatkan nilai [i] yakni [1]
+	proses ini akan berlanjut pada langkah selanjutnya.
+
+8. 	Setelah nilai pada array[i] sama dengan nilai cari, Selanjutnya Kita akan menampilkan 
+	lokasi angka yang kita cari tsb. terdaftar pada ukuran array yang keberapa. Maka kita beri fungsi
+
+	if ( i != sizeof(array) / sizeof(*array)) - (Line 20)
+
+	Ket : Jika nilai i tidak sama dengan ukuran array maka proses ini akan menampilkan lokasi 
+	array pada angka yang telah kita cari, nilai i dibandingkan dengan ukuran array karena menutupi
+	terjadinya error dalam menampilkan hasil.
+
+9. 	Menampilkan lokasi array pada angka yang kita cari, dan menampilkan isi array apakah sama
+	dengan angka yang kita cari atau bukan - (Line 22 - 23)
+
+10. 	Jika nilai i error atau nilai yang kita cari tidak terdapat pada array 
+	maka akan menampilkan hasil error. - (Line 27)
+ 				
